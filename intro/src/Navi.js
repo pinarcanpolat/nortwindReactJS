@@ -4,7 +4,7 @@ export default class Navi extends Component {
     render() {
         return (
             <div>
-                <h2>navi compppp</h2>
+                <h2>navi</h2>
             </div>
         )
     }
