@@ -3,7 +3,7 @@ import { ListGroup, ListGroupItem } from "reactstrap";
 
 export default class CategoryList extends Component {
   state = {
-    categories: []
+    categories: [],
   };
 
   componentDidMount() {
@@ -21,6 +21,11 @@ export default class CategoryList extends Component {
         <ListGroup>
           {this.state.categories.map((category) => (
             <ListGroupItem
+              active={
+                category.categoryName === this.props.currentCategory
+                  ? true
+                  : false
+              }
               key={category.id}
               onClick={() => this.props.changeCategory(category)}
             >
